@@ -1,0 +1,206 @@
+/*====================
+    VARIABLES
+====================*/
+/*====================
+    END VARIABLES
+====================*/
+/*====================
+    STYLES
+====================*/
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap");
+/* Reset */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 40rem) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1.6rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.6;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #e0e8ff;
+  background-image: url(/images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.order {
+  width: 45rem;
+  background-color: #fafafa;
+  border-radius: 2.4rem;
+  overflow: hidden;
+  margin: 3.2rem;
+  -webkit-box-shadow: 0 2rem 5rem -1.8rem rgba(56, 41, 224, 0.2);
+          box-shadow: 0 2rem 5rem -1.8rem rgba(56, 41, 224, 0.2);
+}
+
+@media (min-width: 40rem) {
+  .order {
+    margin: unset;
+  }
+}
+
+.order__hero {
+  background-image: url(/images/illustration-hero.svg);
+  height: 22rem;
+}
+
+.order__body {
+  padding: 2.4rem 3.2rem;
+  text-align: center;
+}
+
+.order__body--title {
+  color: #1f2f56;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.order__body--subtitle {
+  color: #7280a7;
+  font-weight: 500;
+  margin: 1.4rem 2rem;
+}
+
+@media (min-width: 40rem) {
+  .order__body--subtitle {
+    margin: 2rem 2.5rem;
+  }
+}
+
+@media (min-width: 40rem) {
+  .order__body {
+    padding: 4rem;
+  }
+}
+
+.order__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2.4rem;
+  background-color: #f5f7ff;
+  border-radius: 1.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.order__plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.order__plan--text {
+  margin-left: 2rem;
+}
+
+.order__plan--title {
+  color: #1f2f56;
+  font-weight: 900;
+}
+
+.order__plan--subtitle {
+  color: #7280a7;
+  font-weight: 500;
+}
+
+.order__update {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #3829e0;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.order__update:hover {
+  color: rgba(56, 41, 224, 0.6);
+  text-decoration: none;
+}
+
+.order__action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.order__action button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  margin-bottom: 1rem;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: #7280a7;
+  border: none;
+  border-radius: 1.2rem;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.order__action button:hover {
+  color: #1f2f56;
+}
+
+.order__action button:not(:last-child) {
+  margin-bottom: 3rem;
+  padding: 1.6rem;
+  color: #fafafa;
+  background-color: #3829e0;
+  -webkit-box-shadow: 0 1.2rem 3rem -1.2rem rgba(56, 41, 224, 0.6);
+          box-shadow: 0 1.2rem 3rem -1.2rem rgba(56, 41, 224, 0.6);
+}
+
+.order__action button:not(:last-child):hover {
+  background-color: rgba(56, 41, 224, 0.6);
+}
+
+@media (min-width: 40rem) {
+  .order__action button:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

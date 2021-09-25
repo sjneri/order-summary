@@ -1,0 +1,203 @@
+/*====================
+    VARIABLES
+====================*/
+// cp - color primary
+// cs - color secondary
+// ca - color accent
+
+$cp-paleBlue: hsl(225, 100%, 94%);
+$cp-brightBlue: hsl(245, 75%, 52%);
+
+$cs-vPaleBlue: hsl(225, 100%, 98%);
+$cs-desatBlue: hsl(224, 23%, 55%);
+$cs-darkBlue: hsl(223, 47%, 23%);
+
+$ca-white: rgb(250, 250, 250);
+$ca-black: rgb(12, 12, 12);
+
+$font-lg: 2.0rem;
+$font-md: 1.6rem;
+$font-sm: 1.3rem;
+
+@mixin title() {
+  color: $cs-darkBlue;
+  font-weight: 900;
+}
+@mixin subtitle() {
+  color: $cs-desatBlue;
+  font-weight: 500;
+}
+/*====================
+    END VARIABLES
+====================*/
+
+/*====================
+    STYLES
+====================*/
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap');
+
+/* Reset */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media only screen and (max-width: 40rem) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: $font-md;
+  box-sizing: border-box;
+
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  margin: 0 auto;
+
+  background-color: $cp-paleBlue;
+  background-image: url(/images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.order {
+  width: 45rem;
+  background-color: $ca-white;
+  border-radius: 2.4rem;
+  overflow: hidden;
+  margin: 3.2rem;
+
+  box-shadow: 0 2rem 5rem -1.8rem rgba($cp-brightBlue, 0.2);
+
+  @media (min-width: 40rem) {
+    margin: unset;
+  }
+
+  &__hero {
+    background-image: url(/images/illustration-hero.svg);
+    height: 22rem;
+  }
+
+  &__body {
+    padding: 2.4rem 3.2rem;
+    text-align: center;
+
+    &--title {
+      @include title();
+
+      font-size: 3rem;
+    }
+
+    &--subtitle {
+      @include subtitle();
+
+      margin: 1.4rem 2rem;
+
+      @media (min-width: 40rem) {
+        margin: 2rem 2.5rem;
+      }
+    }
+
+    @media (min-width: 40rem) {
+      padding: 4rem;
+    }
+  }
+
+  &__details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 2.4rem;
+    background-color: $cs-vPaleBlue;
+    border-radius: 1.2rem;
+    margin-bottom: 2.4rem;
+  }
+
+  &__plan {
+    display: flex;
+
+    &--text {
+      margin-left: 2rem;
+    }
+
+    &--title {
+      @include title();
+    }
+
+    &--subtitle {
+      @include subtitle();
+    }
+  }
+
+  &__update {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: $cp-brightBlue;
+    transition: all 300ms ease;
+
+    &:hover {
+      color: rgba($cp-brightBlue, 0.6);
+      text-decoration: none;
+    }
+  }
+
+  &__action {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    button {
+      flex: 0 0 100%;
+      margin-bottom: 1rem;
+
+      font-family: 'Red Hat Display', sans-serif;
+      font-weight: 700;
+      font-size: 1.7rem;
+
+      color: $cs-desatBlue;
+      border: none;
+      border-radius: 1.2rem;
+      background-color: transparent;
+
+      cursor: pointer;
+      transition: all 300ms ease;
+
+      &:hover {
+        color: $cs-darkBlue;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+        padding: 1.6rem;
+        color: $ca-white;
+        background-color: $cp-brightBlue;
+
+        box-shadow: 0 1.2rem 3rem -1.2rem rgba($cp-brightBlue, 0.6);
+
+        &:hover {
+          background-color: rgba($cp-brightBlue, 0.6);
+        }
+
+        @media (min-width: 40rem) {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+}

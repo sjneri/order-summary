@@ -70,7 +70,7 @@ body {
   margin: 0 auto;
 
   background-color: $cp-paleBlue;
-  background-image: url(/images/pattern-background-desktop.svg);
+  background-image: url(../images/pattern-background-desktop.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -89,7 +89,7 @@ body {
   }
 
   &__hero {
-    background-image: url(/images/illustration-hero.svg);
+    background-image: url(../images/illustration-hero.svg);
     height: 22rem;
   }
 
